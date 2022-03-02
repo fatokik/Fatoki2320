@@ -1,110 +1,33 @@
-Logan Alcaraz, Kenny Fatoki, Thadeus Menesus, Akhil Mulakala CS 4320 Exercise 3.1
+Logan Alcaraz, Kenny Fatoki, Thadeus Menesus, Akhil Mulakala CS 4320 Exercise 4.2
+
+Augur As a System
+
+As a technical system: 
+Augur as a technical system is an open-source software that collects trace data for a group of repositories. It puts this data through its data model and provides useful metrics on the system which provides a visual idea on how the components of the system are operating, executing and performing. 
+As a sociotechnical system for evaluating open source software project health and sustainability:
+Augur as a sociotechnical system achieves both technical excellence and quality for users. A good example of a sociotechnical theory can be seen through the idea of Burstiness. Burstiness not only shows technical excellence by checking for intense activity and pattern of activity, but also shows quality to the workplace by allowing the users to see if their repository has potential stability and showing how a typical cycle of updates would occur. Augur can also take raw data from your repository and generate a summary that will produce a visual schema. This allows users to actually have a visual representation of their repository to see any issues. 
+As a sociotechnical system for:
+— Wholes Rather than parts:
+Augur takes data from various repositories and combines and synthesizes it into a whole by providing metrics to give meaning and context to the larger stories the data tells
+— Interconnections / Relationships:
+Augur identifies relationships and interconnectedness between the repositories and the data it gathers by synthesizing it into metrics that combine the various sources and describe it as a whole.
+— Non-linear relationships:
+Augur deals with nonlinear relationships because the data the metrics display may not be in a linear trend. The health and sustainability metrics may fluctuate in an unpatterned nonlinear way and Augur must be able to take that nonlinear data and still define metrics to give important context to the communities health and sustainability.
+— Stock and flow relationships:
+Augur is involved with stock and flow relationships because by analyzing data from the repositories, as the communities for free and open software evolve, so will the data and the levels of health and sustainability of the software
+— Dynamic Behavior:
+The interconnections of different repositories and software communities, as well as nonlinear relationships of the data combined with the fluctuating stocks and flows  and feedback loops create the dynamic behavior that Augur needs to handle and give meaningful context to.
+— Feedback loops:
+Feedback loops in Augur include the flow of data from repositories, the Github API, the main application augur and the database. The system ensures that each individual system maintains its interconnections to create such feedback loops
+— Acknowledging that systems are important:
+Augur collects trace data from a group of repositories and uses that to make a data model. If it wasn’t for systems and the system that augur uses then it wouldn’t be possible to have the data model which is the end result of this project
+
+— System as the cause of its behavior:
+A system is defined as “a regularly interacting or interdependent group of items forming a unified whole”. Augur is a system and if it wasn’t for all the parts that go into this project then it wouldn’t be able to function. If it wasn’t for the data then there would be nothing to transform.
 
 
-
-Need: A method for easily submitting and collecting programming assignments.
-Purpose: To create a system which allows students in programming classes to submit programming work. Additionally, the TAs must be able to collect assignments. Finally, the instructors need to be capable of managing the course, its sections, TAs, and assignments.
-Client Base: CS Department – faculty, staff, and students
-
-Users of the software system: CS students, CS course instructors, CS course TAs
-
-Student user requirements:
-Log in and out of portal
-Relevant data: username, password
-Description: student should be able to log in and out of course portal for their course section
-View course page and modules
-Relevant data: assignment, assignmentInfo, grade, totalGrade, announcement, taInfo, instructorInfo
-Description: student should be able to view course modules for their section, including any programming assignment information, assignment grades, instructor/TA announcements, instructor/TA information, and overall course grade
-View assignments page
-Relevant data: assignment, assignmentInfo
-Description: student should be able to view assignments page for their course section
-Upload files
-Relevant data: file, assignment
-Description: student should be able to upload program files to submit for a programming assignment
-Submit programming assignments
-Relevant data: assignment, submission, studentInfo
-Description: student should be able to submit their programming assignments to be graded by the instructor and/or TAs
-View assignment submission:
-Relevant data: assignment, submission, grade, studentInfo
-Description: student should be able to view their programming assignment submissions as well as their grade for the assignment
-Resubmit assignments
-Relevant data: assignment, submission, grade, studentInfo
-Description: student should be able to resubmit their programming assignments as many times as they want before the deadline
-
-Instructor user requirements:
-Log in and out of portal
-Relevant data: username, password
-Description: instructor should be able to log in and out of course portal for all sections of their course
-Edit course page; add and remove programming assignments
-Relevant data: assignment, assignmentInfo, grade, totalGrade, announcement, studentInfo, taInfo, instructorInfo, courseSection
-Description: instructor should be able to edit the course page and its modules for any section, including editing assignment information, student/instructor/TA information, announcements, and student grades
-Add and remove students from course
-Relevant data: studentInfo, courseSection
-Description: instructor should be able to enroll and unenroll students from their course roster for a section
-Make announcements
-Relevant data: announcement, courseSection
-Description: instructor should be able to make course announcements for their students/TAs to view
-Upload files
-Relevant data: file
-Description: instructor should be able to upload any files needed for their course, like program files, files in assignments, announcements, modules, etc.
-View and grade student assignment submissions
-Relevant data: assignment, submission, grade, studentInfo
-Description: instructor should be able to view student submissions for programming assignments and grade them
-Edit student grades
-Relevant data: assignment, grade, totalGrade, studentInfo
-Description: instructor should be able to edit student assignment grades and overall grade
-Add and remove TAs from course
-taInfo, courseSection
-Description: instructor should be able to enroll and unenroll TAs from their course roster for a section
-
-TA user requirements:
-Log in and out of portal
-Relevant data: username, password
-Description:
-View course page and modules
-Relevant data: assignment, assignmentInfo, grade, totalGrade, announcement, studentInfo, taInfo, instructorInfo
-Description: TA should be able to view course modules for their section, including any programming assignment information, assignment grades, instructor/TA announcements, student/instructor/TA information, and overall course grade
-Make announcements
-Relevant data: announcement, courseSection
-Description: TA should be able to make course announcements for their students/TAs to view
-Upload files
-Relevant data: file
-Description: TA should be able to upload any files needed for their course, like program files, files in assignments, announcements, modules, etc.
-View and grade student assignment submissions
-Relevant data: assignment, submission, grade, studentInfo
-Description: TA should be able to view student submissions for programming assignments and grade them
-Edit student assignment grades
-Relevant data: assignment, grade, studentInfo
-Description: TA should be able to edit student programming assignment grades
-
-
-
-Constraints (non-functional) on the activity or the resultant state of the system:
-Security
-Not allow students or TAs have the same power as the teacher unless they are approved by the teacher
-Will prevent student from changing their own grade
-Speed
-Website has to be relatively fast in order for it to be of use
-Can’t be a long delay when it comes to submitting or viewing assignments
-Account Creation
-Needs to have account creation for everybody and give them the correct security access in order to view the right pages
-Compatibility
-Allow users to be able to access the websites from multiple operating systems. This allows more people to be able to use the software
-Portability
-Allow the software to run about the same no matter if its run on a laptop or a phone.
-
-
-System constraints and requirements (i.e. hardware and necessary components):
-Equipment or Device used to view Software
-If user has a device that is out of date then it might cause some elements of the page to not be accessible
-If the user has a faulty keyboard or mouse then some elements of the page might also not be accessible
-People or Users
-Users may have problems using technology and that might cause them to not know how to use the web page
-Internet Access
-Users may not have access to stable internet which might in turn cause the webpage to run slower than initially expected
-
-
-
-
-
+— System structure generates behavior:
+The structure of the Augur software system functions so that data is allowed to flow through the various components of the system. The database holds information about the repos, the Augur application and the workers to collect repo data, and Augur’s frontend for visualization of the data. 
+— Delays:
+There could be multiple delays due to the way the Augur system is structured. If they aren’t able to collect enough data then there would be a delay as to when they could get the data transformed. There could also be a delay in transforming the data due to there being an unknown format with the data or just something entirely different than what was expected ends up being sent to transform
 
